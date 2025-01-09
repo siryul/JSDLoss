@@ -22,7 +22,6 @@ import torch.nn.functional as F
 from torch.cuda.amp import GradScaler
 from torch.cuda.amp import autocast
 
-from CSA.losses.selfdistill import JSDDistillLoss, JSDLoss
 from datasets.cifar10 import CIFAR10_LT
 from datasets.cifar100 import CIFAR100_LT
 from datasets.imagenet import ImageNet_LT
@@ -35,6 +34,7 @@ from models.head import BCLHead
 
 from losses.logitadjust import LogitAdjust
 from losses.contrastive import BalSCL
+from losses.selfdistill import JSDDistillLoss
 
 from utils import config, update_config, create_logger
 from utils import AverageMeter, ProgressMeter
